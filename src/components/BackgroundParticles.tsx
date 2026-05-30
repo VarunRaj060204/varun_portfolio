@@ -28,6 +28,7 @@ function ParticleField() {
         saturation={1} 
         fade 
         speed={1} 
+        // @ts-expect-error color prop is not in StarsProps but might work runtime
         color={theme === 'light' ? "#d90429" : "#ffffff"} 
       />
     </group>

@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, Variants } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
 
@@ -15,7 +15,7 @@ export default function Hero() {
   const textY = useTransform(scrollYProgress, [0, 1], ["0%", "150%"]);
   const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
-  const containerVariant = {
+  const containerVariant: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -23,7 +23,7 @@ export default function Hero() {
     }
   };
 
-  const letterVariant = {
+  const letterVariant: Variants = {
     hidden: { opacity: 0, y: 50, filter: "blur(10px)" },
     visible: { 
       opacity: 1, 

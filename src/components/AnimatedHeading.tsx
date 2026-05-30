@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 interface AnimatedHeadingProps {
   title: string;
@@ -8,7 +8,7 @@ interface AnimatedHeadingProps {
 }
 
 export default function AnimatedHeading({ title, className = "" }: AnimatedHeadingProps) {
-  const container = {
+  const container: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -16,7 +16,7 @@ export default function AnimatedHeading({ title, className = "" }: AnimatedHeadi
     },
   };
 
-  const child = {
+  const child: Variants = {
     hidden: { opacity: 0, y: 50, rotateX: -90 },
     visible: { 
       opacity: 1, 
